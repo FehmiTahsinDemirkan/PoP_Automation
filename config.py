@@ -18,3 +18,8 @@ ACCOUNT_2 = {
     'token_file': 'token_account2.json',
     'output_folder': os.path.join(OUTPUT_FOLDER, 'account2')
 }
+
+
+#mindsite sifre mail
+EMAIL = "fehmiMindsite@gmail.com"
+PASSWORD = "password123"
