@@ -49,3 +49,24 @@ def download_email(service, msg_id, output_folder):
     except Exception as e:
         print(f"E-posta indirilirken bir hata oluştu: {e}")
         return None
+
+def process_all_accounts():
+    """
+    Tüm hesaplar için işlemleri gerçekleştirir.
+    """
+    accounts = [config.ACCOUNT_1, config.ACCOUNT_2]
+    for account in accounts:
+        print(f"{account['name']} için işlemler başlatılıyor...")
+        service = authenticate(account)
+        emails = list_emails(service)
+
+        if not emails:
+            print(f"{account['name']} için hiç e-posta bulunamadı.")
+            continue
+
+        for email in emails:
+            msg_id = email['id']
+            download_email(service, msg_id, account['output_folder'])
+
+if __name__ == '__main__':
+    process_all_accounts()

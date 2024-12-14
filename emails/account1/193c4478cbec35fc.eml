@@ -1,0 +1,334 @@
+Delivered-To: fehmitahsind@gmail.com
+Received: by 2002:ac4:8c89:0:b0:700:23a4:e589 with SMTP id fe9csp823653pib;
+        Sat, 14 Dec 2024 00:27:24 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IG5CnZbicaAUmxEZdZqWM5TZKjv4V5iEXdKZaYOZkdQlUh/uoyfT3R7edbMUDRZ2RmWRxwR
+X-Received: by 2002:a17:906:c146:b0:aa6:82e3:2103 with SMTP id a640c23a62f3a-aab779b7e12mr621255966b.32.1734164843862;
+        Sat, 14 Dec 2024 00:27:23 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1734164843; cv=none;
+        d=google.com; s=arc-20240605;
+        b=LPGOfgxbp9tFYyANUZivgXxZ9nsLFuSwWLBJyttzo9WUdWVpqPGjB73TMsJEmp77W2
+         OvjRP5ZMSNDCOzM0O/cW63eZEEGxyqF3DCKd3f96ThTvBXUoPvxxHiybidbAogMxhNuY
+         gqcHy2N4JPuPsfJ9WW0wOvxnJ9BbCE5H2Lvs3ifD8FaOPmu0U/fgkhTVm3LSVXfVjtAc
+         RSLsrcYbwO8ZO7JoAUb/oyDw4ehMqMK0DNo7LkGvzKcMDu+rfq81vD7hvpYv3qg+n7yw
+         C2LEa3LbUBbpJUBWaZRqYZCioz0hEjorJAq+EJDghtDP3wN2fRNrbKlFG+PnI8iiQcfx
+         2vcw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:list-unsubscribe:list-id:reply-to:from:to
+         :subject:content-transfer-encoding:message-id:date:mime-version
+         :domainkey-signature:dkim-signature;
+        bh=N7vcAaprtDssLOjTRv+o8lE1zfnZ9DWkynzG+phpl6g=;
+        fh=cBWcp9ckqppGSHdCwFtrIsYTf3nfso6oyjaVaKpkxtA=;
+        b=aN+FpBYOn+48xLTEpffDmkNDVfjaVz1tSxHK/k1nm/+FqG9T8re/J6OVA8tCrfUviU
+         cGGGdbdJXqHsX2jovWukkCAx/k6Abm4kiQaKXmtOE46N2A1Ere8kJWNxk4Vha7pKVmnZ
+         OaACImW8DDoH50MKK07coGiuq7pJ+PTkm2vcUqCuRKXZv5xUicrv9MPcIKmfSSn5HkZ0
+         rEQPp0W1RmUhtWN7/FEAeQ5keQe5ZZ8WhraJsQ3LHn4GVTy9b6GvJJ1ij0L828uk/Kk7
+         qE+GbKwqAEULcKtJGqc5QLLNhUD2wSl2kZpgX7afVankEXu/uqHTr4G3rrXl2zdfMloF
+         FLRg==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.miuul.com header.s=em2023 header.b=FceiWENl;
+       spf=pass (google.com: domain of miuul@e.miuul.com designates 185.11.212.187 as permitted sender) smtp.mailfrom=miuul@e.miuul.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=e.miuul.com
+Return-Path: <miuul@e.miuul.com>
+Received: from eg-c-5-187.euromsg.net (eg-c-5-187.euromsg.net. [185.11.212.187])
+        by mx.google.com with ESMTPS id a640c23a62f3a-aab96394969si72458766b.871.2024.12.14.00.27.23
+        for <fehmitahsind@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 14 Dec 2024 00:27:23 -0800 (PST)
+Received-SPF: pass (google.com: domain of miuul@e.miuul.com designates 185.11.212.187 as permitted sender) client-ip=185.11.212.187;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.miuul.com header.s=em2023 header.b=FceiWENl;
+       spf=pass (google.com: domain of miuul@e.miuul.com designates 185.11.212.187 as permitted sender) smtp.mailfrom=miuul@e.miuul.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=e.miuul.com
+Received: by eg-c-5-187.euromsg.net id hbl0mm288o4h for <fehmitahsind@gmail.com>; Sat, 14 Dec 2024 11:06:51 +0300 (envelope-from <miuul@e.miuul.com>)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt;
+ d=e.miuul.com; s=em2023;
+ h=Date:To:From:Reply-To;
+ bh=N7vcAaprtDssLOjTRv+o8lE1zfnZ9DWkynzG+phpl6g=;
+ b=FceiWENlFlkX1cDiSfYF2KDb40YDV7m/6Z+UUK/nfVoDvkbKqLoukxM+FESDM60vuHH6
+ 6bgZUsziTryF5CveBf45DoasQSGliRmgsxH4CM8+QYohz1zzXqtlGEh2X1rNV6Cw6cTYNF
+ 3tlHsVCXlV31dsUpTTPx/MpPT++GEKVLTXq4pAoy2skotVmdqDOXOvS7wkKgqLy8u8Q71c
+ W8EZbIF5MAV7GC1A7vTahB4d1ZH0L9S1ZntUfifLCJcvGpdx38zAi/q9PNsFGQc/6TiFqd
+ 783tD+syBJHRLR3hE+eX5ufQWphJVyjj5HipahuqSbm2hrfsMi/Nl7qqU2pF1C5A==
+DomainKey-Signature: q=dns; a=rsa-sha1; c=nofws;
+ d=e.miuul.com; s=em2023;
+ h=date:to:from:reply-to;
+ b=FDAuvSj/ZQA6V2xIJ7Fj6rK4o9nskCNrbZdZlEH3iutFWXFrzm4MqIRmaIteWGbcng5T
+ q6mOKmB7SN3dDa/XAxErwQ3VJ2y46pS9qn3QMlxuM155G4288k25UbLPvC6Lh/S6zrNutY
+ ceRd8nTgdq1RY5UlK66572UZ9nsvkIBH+7wqhFLz4QADsDzUB/IiyfjIiwgxDwNNel2Yoe
+ u14UjbuqL9uQi0sIxl8i4DTSUEILJFAcw6ps3OBzL+PJda3lG1Mi2p5Fc6/9zDy7dq4GDg
+ fIjJ0A+GJT+Py/Wr+oR5tqs7XFsB8sezt/YpZfuIdGxfA0Y10KzYoONq/98VkD9w==
+MIME-Version: 1.0
+Date: Sat, 14 Dec 2024 11:06:51 +0300
+Message-ID: <42E72DAB0E8346149FFC40D4982EC08B@e.miuul.com>
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+Subject: =?utf-8?B?TWl1dWwgw5xjcmV0c2l6IE1pbmkgQm9vdGNhbXAgQmHFn3Z1cnVsYXLEsSBCYcWfbGFkxLE=?=
+To: fehmitahsind@gmail.com
+From: Miuul <miuul@e.miuul.com>
+Reply-To: elif.yilmaz@miuul.com
+X-EMID: 42E72DAB0E8346149FFC40D4982EC08B
+X-EM-SYSTEM: livem
+X-EM-CAMP: 1A68324799B2424D92E45AE607A17AD2
+X-EM-CUSTOMER: 9B194CBF7B524F43AAAB1B6BA092D13E
+X-EM-MEMBER: 4BE3147D9CDB4A8DB82C5B5CE6C67341
+X-EM-TYPE: bulk
+Return-Path: miuul@e.miuul.com
+X-CSA-Complaints: csa-complaints@eco.de
+List-Id: 9B194CBF7B524F43AAAB1B6BA092D13E <e.miuul.com>
+List-Unsubscribe: <https://lu.euromsg.com/livem/42E72DAB0E8346149FFC40D4982EC08B>,<mailto:jmr@tr.euromsg.com?subject=42E72DAB0E8346149FFC40D4982EC08B>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3.=
+org/1999/xhtml"><head><meta content=3D"euro.message Web Editor v4.3b" name=
+=3D"GENERATOR" /><meta content=3D"IE=3Dedge" http-equiv=3D"X-UA-Compatible"=
+ /><meta content=3D"width=3Ddevice-width, initial-scale=3D1" name=3D"viewpo=
+rt" /><meta content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Ty=
+pe" /><meta content=3D"yes" name=3D"apple-mobile-web-app-capable" /><meta c=
+ontent=3D"black" name=3D"apple-mobile-web-app-status-bar-style" /><meta con=
+tent=3D"telephone=3Dno" name=3D"format-detection" /><title></title><style t=
+ype=3D"text/css">.ReadMsgBody { width: 100%; background-color: rgb(255, 255=
+, 255); }.ExternalClass { width: 100%; background-color:rgb(255, 255, 255);=
+ }body { width: 100%; margin: 0; padding: 0; -webkit-font-smoothing: antial=
+iased; }table { border-collapse: separate !important; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; }@media only screen and (max-device-width: 650px){=
+=2Ecenter{text-align: center !important;}.hide{display: none !important; wi=
+dth: 0px !important; height: 0px !important; background-repeat: no-repeat !=
+important;}a[x-apple-data-detectors] {color: inherit !important; text-decor=
+ation: none !important; font-size: inherit !important; font-family: inherit=
+ !important; font-weight: inherit !important; line-height: inherit !importa=
+nt;} .hundred{width: 100% !important;}.ninety_five{width: 95% !important;}.=
+ninety{width: 90% !important;}.eighty_five{width: 85% !important;}.eighty{w=
+idth: 80% !important;}.fifty{width: 50% !important;}.deviceWidth { width:10=
+0% !important;}.emWrapper{width: 100% !important;}.emWrapperInner{width: 10=
+0% !important;}.center{text-align: center !important;}.emHide{display: none=
+ !important; width: 0px !important; height: 0px !important; background-repe=
+at: no-repeat !important;}.crash{display: block !important;}.textAlignLeft{=
+text-align: left !important;}.textAlignCenter{text-align: center !important=
+;}.textAlignRight{text-align: right !important;}.onlymobile{display: block =
+!important;max-height: none !important; overflow:visible !important;}a[x-ap=
+ple-data-detectors] {color: inherit !important; text-decoration: none !impo=
+rtant; font-size: inherit !important; font-family: inherit !important; font=
+-weight: inherit !important; line-height: inherit !important;} }</style></h=
+ead><style type=3D"text/css">.ReadMsgBody{width:100%;background-color:#fff}=
+=2EexternalClass{width:100%;background-color:#fff}body{width:100%;margin:0p=
+x;padding:0;-webkit-font-smoothing:antialiased}table{border-collapse:collap=
+se}html{width:100%}div,p,a,li,td{-webkit-text-size-adjust:none}*[class].emd=
+igital_preheader{display:none !important;visibility:hidden;opacity:0;color:=
+transparent;height:0;width:0}@media only screen and (max-device-width: 650p=
+x){*[class].euromsggnrlcss{width:100%!important;padding:0 !important;text-a=
+lign:center !important}td[class=3D"euromsggnrlcrash"]{display:block!importa=
+nt}}</style><body id=3D"emWrapperTable" style=3D"background-color:transpare=
+nt; margin:0; padding:0; min-width: 0; -webkit-text-size-adjust:none; -ms-t=
+ext-size-adjust:none;"><!--[if !mso]><!--><span class=3D"emdigital_preheade=
+r" style=3D"display: none !important; overflow:hidden; visibility: hidden; =
+opacity: 0; color: transparent; height: 0; width: 0; font-size:0;max-height=
+:0;">Bilim ve teknoloji merakl=C4=B1lar=C4=B1, veri bilimi ve yapay zeka d=
+=C3=BCnyas=C4=B1na giri=C5=9F yapmaya haz=C4=B1r m=C4=B1s=C4=B1n=C4=B1z?</s=
+pan><!--<![endif]-->  <img src=3D"http://lb.e.miuul.com/eu/r/e/b5c30cb13f7d=
+e90663f4b772bcf981129a30d9c6356f9aeccde67013272533794559babcfd502b415a1bff0=
+990980ab08c5cdb3161a03be3efa790683ee5dfb3250cdb30c076daf56911420be7f0139eb5=
+3200208abd1e9ab498f2ee5bb6022b76a0b3b3d1a394d0ceaac77f9b3c209cb38afd553041c=
+6cfc635c95a457f7358.gif" style=3D"display:none;" border=3D"0" alt=3D"" ><ta=
+ble align=3D"center" class=3D"main" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" width=3D"100%"><tr><td><table align=3D"center" bgcolor=3D"rgb(255=
+, 255, 255)" cellpadding=3D"0" cellspacing=3D"0" class=3D"hundred" style=3D=
+"background-color:rgb(255, 255, 255);" width=3D"100%"><tr><td align=3D"cent=
+er"><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0=
+" class=3D"hundred" style=3D"border-width: 0px; border-style: none; border-=
+color: none;" width=3D"650"><tr><td align=3D"center"><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"emWrapperInner"=
+ width=3D"100%"><tr><td><table align=3D"center" border=3D"0" cellpadding=3D=
+"0" cellspacing=3D"0" class=3D"emWrapper" width=3D"650"><tr><td align=3D"ce=
+nter"><table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" class=3D"hundred" style=3D"background-color: rgb(2=
+55, 255, 255); border-style: none;" width=3D"650"><tr><td align=3D"center">=
+<table align=3D"center" cellpadding=3D"0" cellspacing=3D"0" class=3D"hundre=
+d"><tr><td align=3D"center"><table align=3D"center" border=3D"0" cellpaddin=
+g=3D"0" cellspacing=3D"0"><tr><td align=3D"center" style=3D"padding:0px 0px=
+;border-width:0;border-style:none;border-color:transparent;"><a href=3D"htt=
+p://lb.e.miuul.com/eu/c/tq/6AD79569FF9949B1A840461478C25D8B/11a227d580432eb=
+9fe5e7bee8700d238/?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8cff5712a101db=
+3310ca4d2e5970d9ee87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd290471918283=
+b2a7fd4ba93456da1168241795e962489cda4f605557302d0f990eb8e648e59c426e8b4dd93=
+725efa" style=3D"text-decoration: none;" target=3D"_blank"><img border=3D"0=
+" class=3D"hundred" data-cdn=3D"true" id=3D"lJnJCaYV" src=3D"http://imgserv=
+eri.com/9B194CBF7B524F43AAAB1B6BA092D13E/files/Miuul%20%C3%9Ccretsiz%20Mini=
+%20Bootcamp%20Ba%C5%9Fvurular%C4%B1%20Ba%C5%9Flad%C4%B1(1).png" style=3D"ma=
+rgin: 0px; padding: 0px; width: 650px; display: block;" width=3D"650" /></a=
+></td></tr></table></td></tr></table></td></tr></table></td></tr></table></=
+td></tr><tr><td><table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" class=3D"emWrapper" style=3D"border-style: none;" width=3D"65=
+0"><tr><td align=3D"center"><table align=3D"center" bgcolor=3D"#ffffff" bor=
+der=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hundred" style=3D"ba=
+ckground-color: rgb(255, 255, 255); border-style: none;" width=3D"650"><tr>=
+<td align=3D"center"><table align=3D"center" cellpadding=3D"0" cellspacing=
+=3D"0" class=3D"hundred" width=3D"650"><tr><td align=3D"center"><table alig=
+n=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hund=
+red" width=3D"100%"><tr><td align=3D"left" style=3D"padding: 20px 30px; bor=
+der-width: 0px; border-style: none; border-color: transparent; font-family:=
+ Arial; font-size: 14px; text-align: left; color: rgb(0, 0, 0); font-style:=
+ normal; font-weight: 400; text-decoration: none;" valign=3D"top">Bilim ve =
+teknoloji merakl=C4=B1lar=C4=B1, veri bilimi ve yapay zeka d=C3=BCnyas=C4=
+=B1na giri=C5=9F yapmaya haz=C4=B1r m=C4=B1s=C4=B1n=C4=B1z? Miuul taraf=C4=
+=B1ndan d=C3=BCzenlenen bu =C3=BCcretsiz mini bootcamp, size bu alanda geni=
+=C5=9F bir bak=C4=B1=C5=9F a=C3=A7=C4=B1s=C4=B1 kazand=C4=B1rmay=C4=B1 hede=
+fliyor.<br /><br />Mini bootcamp s=C3=BCrecinde Veri Bilimi, Python Program=
+lama, =C4=B0statistik, Makine =C3=96=C4=9Frenmesi ve Generative AI konular=
+=C4=B1n=C4=B1 ele alarak uygulamal=C4=B1 projeler ger=C3=A7ekle=C5=9Ftirile=
+cektir. Bu e=C4=9Fitime kat=C4=B1larak veri bilimi ve yapay zeka gibi konul=
+arla giri=C5=9F seviyesinde de=C4=9Ferli kazan=C4=B1mlar elde edeceksiniz. =
+Kat=C4=B1l=C4=B1m =C3=BCcretsizdir ve programa kat=C4=B1lan herkese kat=C4=
+=B1l=C4=B1m sertifikas=C4=B1 verilecektir. Siz de bu f=C4=B1rsat=C4=B1 ka=
+=C3=A7=C4=B1rmay=C4=B1n, hemen ba=C5=9Fvurun ve kariyerinize yeni bir y=C3=
+=B6n verin<br /><br /><strong>E=C4=9Fitim Tarihi ve Saati:</strong><br /><b=
+r />E=C4=9Fitim 21 Aral=C4=B1k - 22 Aral=C4=B1k 2024 10:00-12:00 / 13:00-15=
+:00 tarihleri aras=C4=B1nda 2 g=C3=BCn olarak ger=C3=A7ekle=C5=9Ftirilecekt=
+ir.&nbsp;<br /><br /><strong>E=C4=9Fitimde Ele Al=C4=B1nacak Konular:&nbsp;=
+<br /><br />1. Python ile Veri Bilimine Giri=C5=9F</strong><br />&nbsp;<ul>=
+<li>Python Giri=C5=9F</li><li>Numpy</li><li>Pandas</li><li>Ke=C5=9Fif=C3=A7=
+i Veri Analizi</li></ul><br /><strong>2. Belirsizlik Alt=C4=B1nda Karar Ver=
+me</strong><br />&nbsp;<ul><li>Betimsel =C4=B0statistik</li><li>=C3=87=C4=
+=B1kar=C4=B1msal =C4=B0statistik<ul><li>Hipotez Testleri</li><li>AB Testing=
+</li></ul></li></ul><br /><strong>3. Makine =C3=96=C4=9Frenmesi ve Feature =
+Engineering</strong><br />&nbsp;<ul><li>Feature Engineering</li><li style=
+=3D"margin-left: 40px;">Outliers (Ayk=C4=B1r=C4=B1 De=C4=9Ferler)</li><li s=
+tyle=3D"margin-left: 40px;">Missing Values (Eksik De=C4=9Ferler)</li><li st=
+yle=3D"margin-left: 40px;">Encoding (Kodlama)</li><li style=3D"margin-left:=
+ 40px;">Scaling (=C3=96l=C3=A7ekleme)</li><li>Makine =C3=96=C4=9Frenmesi Te=
+melleri</li><li style=3D"margin-left: 40px;">Denetimli =C3=96=C4=9Frenme (S=
+upervised Learning)</li><li style=3D"margin-left: 40px;">Denetimsiz =C3=96=
+=C4=9Frenme (Unsupervised Learning)</li></ul>&nbsp;<br /><strong>4. Yapay Z=
+eka ve GenAI (=C3=9Cretken Yapay Zeka)</strong><br />&nbsp;<ul><li>GenAI Ne=
+dir? Kullan=C4=B1m Alanlar=C4=B1</li><li>Klasik Yapay Zeka ve =C3=9Cretken =
+Yapay Zeka (GenAI)</li><li>Fine-Tuning ve RAG Mimarileri</li><li>Otonom Aja=
+nlar</li><li>Yerelde =C3=87al=C4=B1=C5=9Fma</li></ul><br /><strong>E=C4=9Fi=
+tim kimlere y=C3=B6nelik?</strong><br /><br />Bu mini-bootcamp, veri bilimi=
+ ve yapay zeka teknolojilerini =C3=B6=C4=9Frenmek isteyen herkese a=C3=A7=
+=C4=B1k. =C4=B0ster bir =C3=B6=C4=9Frenci, ister bir ara=C5=9Ft=C4=B1rmac=
+=C4=B1, isterse sadece konuya ilgi duyan biri olun, bu etkinlik sizi bekliy=
+or. Teknoloji d=C3=BCnyas=C4=B1n=C4=B1n bu heyecan verici alan=C4=B1nda ken=
+dinizi test etmek ve yeni beceriler kazanmak i=C3=A7in m=C3=BCkemmel bir f=
+=C4=B1rsat!<br /><br /><strong>E=C4=9Fitim nerede ger=C3=A7ekle=C5=9Fecek?<=
+/strong><br /><br />Canl=C4=B1 olarak Zoom =C3=BCzerinden ger=C3=A7ekle=C5=
+=9Ftirilecektir.&nbsp;<br /><br /><strong>E=C4=9Fitime nas=C4=B1l kat=C4=B1=
+labilirim?</strong><br /><br />Kat=C4=B1l=C4=B1m i=C3=A7in a=C5=9Fa=C4=9F=
+=C4=B1da bulunan ba=C4=9Flant=C4=B1 =C3=BCzerinden ba=C5=9Fvuru formunu dol=
+durabilirsiniz. Etkinlik'ten 1 g=C3=BCn =C3=B6nce kat=C4=B1l=C4=B1m bilgile=
+ri taraf=C4=B1n=C4=B1za iletilecektir.</td></tr></table></td></tr></table><=
+/td></tr></table></td></tr></table></td></tr><tr><td><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"emWrapper" widt=
+h=3D"650"><tr><td align=3D"center"><table align=3D"center" bgcolor=3D"#ffff=
+ff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"hundred" styl=
+e=3D"background-color: rgb(255, 255, 255); border-style: none;" width=3D"65=
+0"><tr><td align=3D"center"><table align=3D"center" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%"><tr><td align=3D"center"><table align=3D"left" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"hundred"><tr><td style=3D"padd=
+ing:10px 10px;border-width:0;border-style:none;border-color:transparent;"><=
+table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" wid=
+th=3D"150"><tr><td align=3D"center" bgcolor=3D"#7363ee" style=3D"border-sty=
+le: none; border-width: 0px; border-color: rgb(0, 0, 0); background-color: =
+rgb(115, 99, 238); border-radius: 6px; text-align: center; font-weight: bol=
+d; padding: 10px;" valign=3D"middle" width=3D"150"><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"><tr><td ali=
+gn=3D"center" style=3D"font-size: 16px; font-family: Arial; font-style: nor=
+mal; text-align: center; color: rgb(255, 255, 255); text-decoration: none; =
+font-weight: 700;"><a href=3D"http://lb.e.miuul.com/eu/c/tq/9F592D8FC2854BD=
+795588770CB131E17/1351132fe4491b3e7ab69ee90eff2ae3/?i=3Dccb08bb1d7628666ba9=
+e4a2382c41c28c1e59c8cff5712a101db3310ca4d2e5970d9ee87182ea9d9cbfd7084dc97ff=
+56ceceeeda28151a4decd290471918283b2a7fd4ba93456da1168241795e962489cda4f6055=
+57302d0f990eb8e648e59c426e8b4dd93725efa" style=3D"font-size: 16px; font-fam=
+ily: Arial; font-style: normal; text-align: center; color: rgb(255, 255, 25=
+5); text-decoration: none; font-weight: 700;" target=3D"_blank">=C5=9Eimdi =
+Ba=C5=9Fvur</a></td></tr></table></td></tr></table></td></tr></table></td><=
+/tr></table></td></tr></table></td></tr></table></td></tr><tr><td><table al=
+ign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"em=
+Wrapper" style=3D"border-style: none;" width=3D"650"><tr><td align=3D"cente=
+r"><table align=3D"center" bgcolor=3D"#ffffff" border=3D"0" cellpadding=3D"=
+0" cellspacing=3D"0" class=3D"hundred" style=3D"background-color: rgb(255, =
+255, 255); border-style: none;" width=3D"650"><tr><td align=3D"center"><tab=
+le cellpadding=3D"0" cellspacing=3D"0" class=3D"hundred" width=3D"100%"><tr=
+><td align=3D"center" style=3D"border-width:0;border-style:none;border-colo=
+r:transparent;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cell=
+spacing=3D"0" width=3D"100%"><tr><td align=3D"center"><section class=3D"emC=
+ode SimpleUploadsOverContainer" id=3D"cYaSvRwx">&nbsp;</section></td></tr><=
+tr><td align=3D"center" style=3D"border-width: 0px; border-style: none; bor=
+der-color: transparent; background-color: rgba(0, 0, 0, 0);"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+><tr><td align=3D"center">&nbsp;</td></tr><tr><td align=3D"center"><table b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"width:650px;"><tr>=
+<td width=3D"170">&nbsp;</td><td width=3D"34"><span style=3D"font-size:11px=
+;">&nbsp;</span></td><td width=3D"35"><span style=3D"font-size:11px;">&nbsp=
+; </span><div style=3D"text-align: center;"><br /><br /><span style=3D"font=
+-size:11px;">&nbsp;</span></div><span style=3D"font-size:11px;"> </span></t=
+d><td style=3D"text-align: center;" width=3D"34"><span style=3D"font-size:1=
+1px;"><img border=3D"0" src=3D"https://img.euromsg.net/9B194CBF7B524F43AAAB=
+1B6BA092D13E/images/2023/10/20-1/instagram.png" style=3D"width: 34px; displ=
+ay: block;" width=3D"34" /></span></td><td style=3D"text-align: center;" wi=
+dth=3D"35"><span style=3D"font-size:11px;">&nbsp;</span></td><td style=3D"t=
+ext-align: center;" width=3D"34"><span style=3D"font-size:11px;"><a href=3D=
+"http://lb.e.miuul.com/eu/c/tq/B206145641054D47ABD4CCD524D84A8F/e6d51b79cb3=
+d80353cd4b4f78751a774/?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8cff5712a1=
+01db3310ca4d2e5970d9ee87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd29047191=
+8283b2a7fd4ba93456da1168241795e962489cda4f605557302d0f990eb8e648e59c426e8b4=
+dd93725efa" style=3D"text-decoration: none;" target=3D"_blank"><img border=
+=3D"0" src=3D"https://img.euromsg.net/9B194CBF7B524F43AAAB1B6BA092D13E/imag=
+es/2023/10/20-1/youtube.png" style=3D"width: 34px; display: block;" width=
+=3D"34" /></a></span></td><td style=3D"text-align: center;" width=3D"35"><s=
+pan style=3D"font-size:11px;">&nbsp;</span></td><td style=3D"text-align: ce=
+nter;" width=3D"34"><span style=3D"font-size:11px;"><a href=3D"http://lb.e.=
+miuul.com/eu/c/tq/9D2890D5745B46C0994A4B7C63A68CAC/c3aec01c6b921276ba2fd31d=
+74faa577/?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8cff5712a101db3310ca4d2=
+e5970d9ee87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd290471918283b2a7fd4ba=
+93456da1168241795e962489cda4f605557302d0f990eb8e648e59c426e8b4dd93725efa" s=
+tyle=3D"text-decoration: none;" target=3D"_blank"><img border=3D"0" src=3D"=
+https://img.euromsg.net/9B194CBF7B524F43AAAB1B6BA092D13E/images/2023/10/20-=
+1/linkedIn.png" style=3D"width: 34px; display: block;" width=3D"34" /></a><=
+/span></td><td style=3D"text-align: center;" width=3D"35">&nbsp;</td><td st=
+yle=3D"text-align: center;" width=3D"34"><span style=3D"font-size:11px;"><a=
+ href=3D"http://lb.e.miuul.com/eu/c/tq/6A2BCD12FD0842DC8E6F458990E234DC/540=
+36d8c4005478539c938bb2b4be177/?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8c=
+ff5712a101db3310ca4d2e5970d9ee87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd=
+290471918283b2a7fd4ba93456da1168241795e962489cda4f605557302d0f990eb8e648e59=
+c426e8b4dd93725efa" style=3D"text-decoration: none;" target=3D"_blank"><img=
+ border=3D"0" src=3D"https://img.euromsg.net/9B194CBF7B524F43AAAB1B6BA092D1=
+3E/images/2023/10/20-1/spotify.png" style=3D"width: 34px; display: block;" =
+width=3D"34" /></a></span></td><td style=3D"text-align: center;" width=3D"1=
+70"><span style=3D"font-size:11px;">&nbsp;</span></td></tr></table><div><sp=
+an style=3D"font-family:trebuchet ms,helvetica,sans-serif;"><span style=3D"=
+font-size:12px;"><span style=3D"font-size:11px;">&nbsp; Bu e-posta taraf=C4=
+=B1n=C4=B1za Miuul taraf=C4=B1ndan olu=C5=9Fturulan =C3=BCye listesine fehm=
+itahsind@gmail.com adresi ile kay=C4=B1t oldu=C4=9Funuz i=C3=A7in g=C3=B6nd=
+erilmi=C5=9Ftir. E=C4=9Fer bir hata oldu=C4=9Funu d=C3=BC=C5=9F=C3=BCn=C3=
+=BCyorsan=C4=B1z, =C3=BCyelik bilgilerinizi g=C3=BCncellemek ya da =C3=BCye=
+likten ayr=C4=B1lmak i=C3=A7in l=C3=BCtfen <a href=3D"http://lb.e.miuul.com=
+/eu/c/tq/09254554A0F74189AF97D7E7AE263B42/7630611f0ba1aeff3703d4067bf40b49/=
+?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8cff5712a101db3310ca4d2e5970d9ee=
+87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd290471918283b2a7fd4ba93456da11=
+68241795e962489cda4f605557302d0f990eb8e648e59c426e8b4dd93725efa" style=3D"c=
+olor:#22272a; text-decoration:none;">t=C4=B1klay=C4=B1n.</a><br /><br /><a =
+href=3D"http://lb.e.miuul.com/eu/c/tq/EB59795E9E7540F8B32CE34837CC3B0C/20c3=
+b70a5d49b1b3383fec3db142ff4b/?i=3Dccb08bb1d7628666ba9e4a2382c41c28c1e59c8cf=
+f5712a101db3310ca4d2e5970d9ee87182ea9d9cbfd7084dc97ff56ceceeeda28151a4decd2=
+90471918283b2a7fd4ba93456da1168241795e962489cda4f605557302d0f990eb8e648e59c=
+426e8b4dd93725efa" style=3D"color: rgb(34, 39, 42); text-decoration: none;"=
+>=C3=9Cyelikten Ayr=C4=B1l</a><br /><br />Adres: PACKHUSGATAN 31 A, LGH 120=
+3 SE-21645 LIMHAMN Sweden &nbsp;</span><br />=E2=80=8B</span></span></div><=
+/td></tr></table></td></tr></table></td></tr></table></td></tr></table></td=
+></tr></table></td></tr></table></td></tr></table><br />&nbsp;</td></tr></t=
+able></td></tr><tr><td><table width=3D"100%" border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0"><tr><td height=3D"36" align=3D"center" valign=3D"bottom"=
+><table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center"><=
+tr><td align=3D"center"><span style=3D"font-family:Arial; font-size:11px; c=
+olor:#515151; text-align:center;">Bu mesaj size <a style=3D"text-decoration=
+:none; color:#515151" href=3D"https://www.relateddigital.com/" rel=3D"nofol=
+low">Related Digital</a> arac=C4=B1 hizmet sa=C4=9Flay=C4=B1c=C4=B1s=C4=B1 =
+kullan=C4=B1larak iletilmi=C5=9Ftir.</span></td></tr></table></td></tr><tr>=
+<td height=3D"36" align=3D"center" valign=3D"bottom"><table border=3D"0" ce=
+llspacing=3D"0" cellpadding=3D"0" align=3D"center"><tr><td><a href=3D"http:=
+//www.relateddigital.com/"><img src=3D"http://www.relatedhq.com/poweredby/a=
+gent/TR_RMCTR_poweredby.gif" border=3D"0" width=3D"114" height=3D"31"></a><=
+/td></tr></table></td></tr></table></td></tr></table></body></html>
+
