@@ -21,12 +21,16 @@ def authenticate(account):
             print(f"Yeni kimlik doğrulama dosyası oluşturuldu: {token_file}")
     return build('gmail', 'v1', credentials=creds)
 
-def list_emails(service, max_results=3):
+def list_sent_emails(service, max_results=3):
     """
-    Gelen kutusundaki e-postaları listeler.
+    Gönderilen mailleri (Sent) listeler.
     """
-    results = service.users().messages().list(userId='me', maxResults=max_results).execute()
-    return results.get('messages', [])
+    try:
+        results = service.users().messages().list(userId='me', labelIds=['SENT'], maxResults=max_results).execute()
+        return results.get('messages', [])
+    except Exception as e:
+        print(f"Gönderilen mailleri listelerken bir hata oluştu: {e}")
+        return []
 
 def download_email(service, msg_id, output_folder):
     """
@@ -58,10 +62,10 @@ def process_all_accounts():
     for account in accounts:
         print(f"{account['name']} için işlemler başlatılıyor...")
         service = authenticate(account)
-        emails = list_emails(service)
+        emails = list_sent_emails(service)
 
         if not emails:
-            print(f"{account['name']} için hiç e-posta bulunamadı.")
+            print(f"{account['name']} için gönderilen mailler bulunamadı.")
             continue
 
         for email in emails:
