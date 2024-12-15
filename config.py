@@ -23,3 +23,6 @@ ACCOUNT_2 = {
 #mindsite sifre mail
 EMAIL = "fehmiMindsite@gmail.com"
 PASSWORD = "password123"
+
+url = "https://1drv.ms/f/s!AgdRQ2KZOKr8b7yzPS-Y6uZdR6g?e=8b2bgF"
+
