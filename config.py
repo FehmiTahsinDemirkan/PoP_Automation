@@ -2,7 +2,7 @@ import os
 
 # Ortak ayarlar
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-OUTPUT_FOLDER = 'emails'  # E-postaların kaydedileceği klasör
+OUTPUT_FOLDER = 'assets'  # E-postaların kaydedileceği klasör
 CREDENTIALS_FILE = 'credentials.json'
 
 # Hesap 1 için ayarlar
@@ -23,6 +23,9 @@ ACCOUNT_2 = {
 #mindsite sifre mail
 EMAIL = "fehmiMindsite@gmail.com"
 PASSWORD = "password123"
+MIND_SITE_URL = "https://app.themindsite.com/login"  # Mindsite login URL
+
+
 
 url = "https://1drv.ms/f/s!AgdRQ2KZOKr8b7yzPS-Y6uZdR6g?e=8b2bgF"
 

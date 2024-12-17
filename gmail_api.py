@@ -4,6 +4,17 @@ from googleapiclient.discovery import build
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 import config
+import logging
+
+# === Loglama Ayarları ===
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("process_log.log", encoding="utf-8"),
+        logging.StreamHandler()
+    ]
+)
 
 def authenticate(account):
     """
@@ -18,7 +29,7 @@ def authenticate(account):
         creds = flow.run_local_server(port=0)
         with open(token_file, 'w') as token:
             token.write(creds.to_json())
-            print(f"Yeni kimlik doğrulama dosyası oluşturuldu: {token_file}")
+            logging.info(f"Yeni kimlik doğrulama dosyası oluşturuldu: {token_file}")
     return build('gmail', 'v1', credentials=creds)
 
 def list_sent_emails(service, max_results=3):
@@ -29,7 +40,7 @@ def list_sent_emails(service, max_results=3):
         results = service.users().messages().list(userId='me', labelIds=['SENT'], maxResults=max_results).execute()
         return results.get('messages', [])
     except Exception as e:
-        print(f"Gönderilen e-postalar listelenirken bir hata oluştu: {e}")
+        logging.error(f"Gönderilen e-postalar listelenirken bir hata oluştu: {e}")
         return []
 
 def download_email(service, msg_id, output_folder):
@@ -48,29 +59,29 @@ def download_email(service, msg_id, output_folder):
         file_path = os.path.join(output_folder, file_name)
         with open(file_path, 'wb') as f:
             f.write(email_data)
-            print(f"E-posta indirildi: {file_path}")
+            logging.info(f"E-posta indirildi: {file_path}")
         return file_path
     except Exception as e:
-        print(f"E-posta indirilirken bir hata oluştu: {e}")
+        logging.error(f"E-posta indirilirken bir hata oluştu: {e}")
         return None
 
-def process_all_accounts():
+def process_all_accounts(output_folder="assets"):
     """
     Tüm hesaplar için işlemleri gerçekleştirir.
     """
     accounts = [config.ACCOUNT_1, config.ACCOUNT_2]
     for account in accounts:
-        print(f"{account['name']} için işlemler başlatılıyor...")
+        logging.info(f"{account['name']} için işlemler başlatılıyor...")
         service = authenticate(account)
         emails = list_sent_emails(service)
 
         if not emails:
-            print(f"{account['name']} için gönderilen kutusunda hiç e-posta bulunamadı.")
+            logging.info(f"{account['name']} için gönderilen kutusunda hiç e-posta bulunamadı.")
             continue
 
         for email in emails:
             msg_id = email['id']
-            download_email(service, msg_id, account['output_folder'])
+            download_email(service, msg_id, output_folder)
 
 if __name__ == '__main__':
     process_all_accounts()

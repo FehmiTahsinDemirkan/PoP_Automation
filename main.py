@@ -1,76 +1,41 @@
-from googleapiclient.discovery import build
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-import os
-import base64
-import config
+import threading
+from onedrive_upload import upload_assets_folder_to_onedrive
 
-def authenticate(account):
-    """
-    Belirtilen hesap için kimlik doğrulama işlemini gerçekleştirir.
-    """
-    creds = None
-    token_file = account['token_file']
-    if os.path.exists(token_file):
-        creds = Credentials.from_authorized_user_file(token_file, config.SCOPES)
-    else:
-        flow = InstalledAppFlow.from_client_secrets_file(config.CREDENTIALS_FILE, config.SCOPES)
-        creds = flow.run_local_server(port=0)
-        with open(token_file, 'w') as token:
-            token.write(creds.to_json())
-            print(f"Yeni kimlik doğrulama dosyası oluşturuldu: {token_file}")
-    return build('gmail', 'v1', credentials=creds)
 
-def list_sent_emails(service, max_results=3):
-    """
-    Gönderilen mailleri (Sent) listeler.
-    """
-    try:
-        results = service.users().messages().list(userId='me', labelIds=['SENT'], maxResults=max_results).execute()
-        return results.get('messages', [])
-    except Exception as e:
-        print(f"Gönderilen mailleri listelerken bir hata oluştu: {e}")
-        return []
+import mindsitePrice
+import gmail_api
+import sharepoint
 
-def download_email(service, msg_id, output_folder):
-    """
-    Belirtilen mesaj ID'sine sahip e-postayı indirir.
-    """
-    try:
-        message = service.users().messages().get(userId='me', id=msg_id, format='raw').execute()
-        raw_data = message['raw']
-        email_data = base64.urlsafe_b64decode(raw_data)
 
-        if not os.path.exists(output_folder):
-            os.makedirs(output_folder)
+def run_gmail_api():
+    output_folder = "assets"
+    gmail_api.process_all_accounts(output_folder=output_folder)
 
-        file_name = f"{msg_id}.eml"
-        file_path = os.path.join(output_folder, file_name)
-        with open(file_path, 'wb') as f:
-            f.write(email_data)
-            print(f"E-posta indirildi: {file_path}")
-        return file_path
-    except Exception as e:
-        print(f"E-posta indirilirken bir hata oluştu: {e}")
-        return None
 
-def process_all_accounts():
-    """
-    Tüm hesaplar için işlemleri gerçekleştirir.
-    """
-    accounts = [config.ACCOUNT_1, config.ACCOUNT_2]
-    for account in accounts:
-        print(f"{account['name']} için işlemler başlatılıyor...")
-        service = authenticate(account)
-        emails = list_sent_emails(service)
+def run_sharepoint():
+    sharepoint.main()
 
-        if not emails:
-            print(f"{account['name']} için gönderilen mailler bulunamadı.")
-            continue
+def take_screenshot():
+ mindsitePrice.main()
 
-        for email in emails:
-            msg_id = email['id']
-            download_email(service, msg_id, account['output_folder'])
+APP_ID = '4eeb88e1-1665-4527-bf2c-c0df55f25927'
+
 
 if __name__ == '__main__':
-    process_all_accounts()
+    # Gmail API ve SharePoint işlemlerini paralel olarak çalıştır
+    gmail_thread = threading.Thread(target=run_gmail_api)
+    sharepoint_thread = threading.Thread(target=run_sharepoint)
+    take_screenshot_thread = threading.Thread(target=take_screenshot())
+    # Threadleri başlat
+    gmail_thread.start()
+    sharepoint_thread.start()
+    take_screenshot_thread.start()
+
+    # Thread'lerin tamamlanmasını bekle
+    gmail_thread.join()
+    sharepoint_thread.join()
+    take_screenshot_thread.join()
+    upload_assets_folder_to_onedrive(APP_ID, folder_name='fehmimindsite', assets_folder_name='assets')
+
+
+    print("Tamamlandi")
