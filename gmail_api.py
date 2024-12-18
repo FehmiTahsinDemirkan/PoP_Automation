@@ -17,9 +17,6 @@ logging.basicConfig(
 )
 
 def authenticate(account):
-    """
-    Belirtilen hesap için kimlik doğrulama işlemini gerçekleştirir.
-    """
     creds = None
     token_file = account['token_file']
     if os.path.exists(token_file):
@@ -33,9 +30,6 @@ def authenticate(account):
     return build('gmail', 'v1', credentials=creds)
 
 def list_sent_emails(service, max_results=3):
-    """
-    Gönderilen kutusundaki e-postaları listeler.
-    """
     try:
         results = service.users().messages().list(userId='me', labelIds=['SENT'], maxResults=max_results).execute()
         return results.get('messages', [])
@@ -44,9 +38,6 @@ def list_sent_emails(service, max_results=3):
         return []
 
 def download_email(service, msg_id, output_folder):
-    """
-    Belirtilen mesaj ID'sine sahip e-postayı indirir.
-    """
     try:
         message = service.users().messages().get(userId='me', id=msg_id, format='raw').execute()
         raw_data = message['raw']
@@ -66,9 +57,6 @@ def download_email(service, msg_id, output_folder):
         return None
 
 def process_all_accounts(output_folder="assets"):
-    """
-    Tüm hesaplar için işlemleri gerçekleştirir.
-    """
     accounts = [config.ACCOUNT_1, config.ACCOUNT_2]
     for account in accounts:
         logging.info(f"{account['name']} için işlemler başlatılıyor...")

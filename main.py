@@ -22,7 +22,6 @@ APP_ID = '4eeb88e1-1665-4527-bf2c-c0df55f25927'
 
 
 if __name__ == '__main__':
-    # Gmail API ve SharePoint işlemlerini paralel olarak çalıştır
     gmail_thread = threading.Thread(target=run_gmail_api)
     sharepoint_thread = threading.Thread(target=run_sharepoint)
     take_screenshot_thread = threading.Thread(target=take_screenshot())
@@ -31,7 +30,7 @@ if __name__ == '__main__':
     sharepoint_thread.start()
     take_screenshot_thread.start()
 
-    # Thread'lerin tamamlanmasını bekle
+    # Threadlerin tamamlanmasını bekle
     gmail_thread.join()
     sharepoint_thread.join()
     take_screenshot_thread.join()
