@@ -1,10 +1,10 @@
 import time
-import os  # Klasör oluşturmak için os modülü
+import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import config  # config.py modülünü import ediyoruz
+import config
 
 def take_screenshot(driver, file_name, assets_folder):
 
@@ -20,7 +20,6 @@ def run_sharepoint():
 
     driver.get(url)
 
-    # Sayfanın yüklenmesini bekle
     try:
         WebDriverWait(driver, 20).until(
             EC.presence_of_element_located((By.XPATH, '//*[@id="appRoot"]/div/div[2]/div/div/div[2]/div[2]/main/div'))
@@ -31,24 +30,20 @@ def run_sharepoint():
         driver.quit()
         return
 
-    # 'assets' klasörünü oluştur
     assets_folder = "assets"
-    if not os.path.exists(assets_folder):
-        os.makedirs(assets_folder)
-        print(f"'{assets_folder}' klasörü oluşturuldu.")
 
-    # Scroll işlemi için hedef öğeyi bul
+
     scroll_element = driver.find_element(By.XPATH, '//*[@id="appRoot"]/div/div[2]/div/div/div[2]/div[2]/main/div')
 
-    time.sleep(2)  # Sayfa yüklenmesini tamamlamak için kısa bir ek bekleme
+    time.sleep(2)
     take_screenshot(driver, "screenshot_1.png", assets_folder)
 
     driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight / 3;", scroll_element)  # Scroll öğesinin 1/3'ü kadar kaydır
-    time.sleep(2)  # Kaydırma animasyonu için kısa bir bekleme
+    time.sleep(2)
     take_screenshot(driver, "screenshot_2.png", assets_folder)
 
     driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight;", scroll_element)  # Scroll öğesinin en altına git
-    time.sleep(2)  # Kaydırma animasyonu için kısa bir bekleme
+    time.sleep(2)  
     take_screenshot(driver, "screenshot_3.png", assets_folder)
 
     driver.quit()

@@ -190,3 +190,118 @@
 2024-12-18 15:07:38,659 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
 2024-12-18 15:07:38,828 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
 2024-12-18 15:07:38,985 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 15:26:13,366 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 15:26:18,592 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 15:26:18,888 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 15:26:19,196 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 15:26:19,196 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 15:26:20,352 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 15:26:20,532 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 15:26:20,708 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 15:28:13,948 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 15:28:17,482 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 15:28:17,787 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 15:28:18,107 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 15:28:18,108 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 15:28:19,216 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 15:28:19,419 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 15:28:19,663 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 17:14:31,442 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 17:14:38,001 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 17:14:38,287 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 17:14:38,587 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 17:14:38,587 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 17:14:39,600 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 17:14:39,760 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 17:14:39,899 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 17:21:21,437 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 17:21:36,411 - ERROR - Gönderilen e-postalar listelenirken bir hata oluştu: Unable to find the server at oauth2.googleapis.com
+2024-12-18 17:21:36,411 - INFO - Hesap 1 için gönderilen kutusunda hiç e-posta bulunamadı.
+2024-12-18 17:21:36,411 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 17:21:41,360 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 17:21:41,903 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 17:21:42,046 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 17:23:22,655 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 17:23:29,095 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 17:23:29,360 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 17:23:29,626 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 17:23:29,627 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 17:23:30,829 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 17:23:31,221 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 17:23:31,349 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 17:29:10,228 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 17:29:16,730 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 17:29:17,016 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 17:29:17,282 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 17:29:17,282 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 17:29:18,530 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 17:29:18,667 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 17:29:18,791 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 17:45:52,605 - INFO - ====== WebDriver manager ======
+2024-12-18 17:45:53,455 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 17:45:56,904 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 17:45:57,321 - INFO - Driver [C:\Users\fehmi\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-18 17:46:18,711 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 17:46:23,055 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 17:46:23,330 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 17:46:23,598 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 17:46:23,598 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 17:46:24,751 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 17:46:24,913 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 17:46:25,040 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 18:40:09,956 - INFO - ====== WebDriver manager ======
+2024-12-18 18:40:10,629 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 18:40:11,007 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 18:40:11,315 - INFO - Driver [C:\Users\fehmi\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-18 18:40:29,905 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 18:40:31,200 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 18:40:31,458 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 18:40:31,728 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 18:40:31,731 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 18:40:32,766 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 18:40:32,908 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 18:40:33,031 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 18:43:01,764 - INFO - ====== WebDriver manager ======
+2024-12-18 18:43:02,445 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 18:43:02,766 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 18:43:03,086 - INFO - Driver [C:\Users\fehmi\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-18 18:43:23,215 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 18:43:24,450 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 18:43:24,715 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 18:43:24,966 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 18:43:24,966 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 18:43:25,899 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 18:43:26,043 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 18:43:26,213 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 19:00:52,841 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 19:00:54,240 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 19:00:54,496 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 19:00:54,744 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 19:00:54,744 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 19:00:55,658 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 19:00:55,798 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 19:00:55,923 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 19:13:13,182 - INFO - ====== WebDriver manager ======
+2024-12-18 19:13:13,922 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 19:13:14,260 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 19:13:14,589 - INFO - Driver [C:\Users\fehmi\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-18 19:13:41,543 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 19:13:42,864 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 19:13:43,127 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 19:13:43,376 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 19:13:43,376 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 19:13:44,306 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 19:13:44,437 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 19:13:44,563 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml
+2024-12-18 19:16:48,981 - INFO - Hesap 1 için işlemler başlatılıyor...
+2024-12-18 19:16:49,777 - INFO - ====== WebDriver manager ======
+2024-12-18 19:16:50,371 - INFO - E-posta indirildi: assets\193c4cd7a4278c88.eml
+2024-12-18 19:16:50,629 - INFO - E-posta indirildi: assets\193c4cd337dcec9a.eml
+2024-12-18 19:16:50,726 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 19:16:50,996 - INFO - E-posta indirildi: assets\193c4cbd31a0003e.eml
+2024-12-18 19:16:50,997 - INFO - Hesap 2 için işlemler başlatılıyor...
+2024-12-18 19:16:51,074 - INFO - Get LATEST chromedriver version for google-chrome
+2024-12-18 19:16:51,437 - INFO - Driver [C:\Users\fehmi\.wdm\drivers\chromedriver\win64\131.0.6778.108\chromedriver-win32/chromedriver.exe] found in cache
+2024-12-18 19:16:52,068 - INFO - E-posta indirildi: assets\193c6f5c6f04e1b9.eml
+2024-12-18 19:16:52,323 - INFO - E-posta indirildi: assets\19391c0ad51f0b91.eml
+2024-12-18 19:16:52,617 - INFO - E-posta indirildi: assets\1938d218ce01e886.eml

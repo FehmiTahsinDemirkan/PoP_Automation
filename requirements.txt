@@ -1,8 +1,0 @@
-requests
-msal
-openpyxl
-python-dotenv
-pandas
-requests_oauthlib
-flask
-selenium

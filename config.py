@@ -2,7 +2,7 @@ import os
 
 # Ortak ayarlar
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
-OUTPUT_FOLDER = 'assets'  # E-postaların kaydedileceği klasör
+OUTPUT_FOLDER = 'assets'
 CREDENTIALS_FILE = 'credentials.json'
 
 # Hesap 1 için ayarlar
